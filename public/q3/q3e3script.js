@@ -5,6 +5,7 @@ else accountList = JSON.parse(acctString) // converts string into the correct da
 
 const form = document.getElementById("dForm"); // get the HTML form from q3ge2Mendoza.html
 
+// event handler on the submit button instead of onsubmit on the button itself
 form.addEventListener("submit", function(e) { // assign an event handler of submit to the form
     e.preventDefault(); // prevent page reload because forms gets submitted
 
@@ -26,7 +27,17 @@ form.addEventListener("submit", function(e) { // assign an event handler of subm
         console.log(accountList) // to check all the account information if it will be saved correctly
         acctString = JSON.stringify(accountList) // convert object into string, as a requirement of localStorage
         localStorage.setItem("accounts", acctString) // save on the user's computer
+        form.submit();
     }
   });
+
+// event handler for the reset button instead of onreset on the button itself
+form.addEventListener("reset", function(e) { // 
+  // Ask for confirmation before clearing
+  if (!confirm("Sure you want to clear your data?")) {
+    e.preventDefault(); // cancel the reset if user clicks "Cancel"
+  }
+});
+
 
 
