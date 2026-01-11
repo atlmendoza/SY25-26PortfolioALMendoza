@@ -25,50 +25,17 @@
         }
 
         fieldset:nth-child(2) {
-        margin-top: 20px;
+             margin-top: 20px;
         }
 
         legend {
-        background: black;
-        color: yellow;
-        padding: 5px;
+            background: black;
+            color: yellow;
+            padding: 5px;
         }
         label {
-        margin: 5%;
+             margin: 5%;
         }
-
-     @media (max-width: 700px) { /* checks if width of the viewport has a max-width of 700px then style rules below will be applied on selected HTML elements */
-        header { /*will change the header layout to vertical*/
-          text-align: center;
-        }
-        header img {
-          float: none;
-          display: block;
-          margin: 0 auto;
-        }
-        section { 
-          width: 90%;
-        }
-        section:not(section:nth-of-type(3)) { /* will not be applied on the 3rd section containing the youtube video */
-          flex-direction: column; /* flex items will flow columnwise (vertical) */
-        }
-        article {
-          width: 90%;
-        }
-        nav {
-          text-align: center;
-        }
-        a:link, a:visited { /*  makes navigation vertical */
-          border-right: none;
-          border-bottom: 2px solid white;
-          display: block;
-          padding: 5px 0;
-        }
-        iframe { /* change the size of the youtube video */
-          width: 100%;
-          height: auto;
-        }
-      }
     </style>
   </head>
   <body>
@@ -87,15 +54,14 @@
     </header>
     <section>
       <h1 class="title">Sign-up Page</h1>
-      <form id="dForm" action="registered.html" 
-            method="get" onsubmit="return showAccounts()">
+      <form id="dForm" action="registered.html" method="get">
         <fieldset>
           <legend>Your Credentials</legend><br/>
           <label> Username: 
-            <input type="text" name="uname" id="uname" />
+            <input type="text" name="uname" id="uname" required />
           </label><br/><br/>
           <label> Password :
-            <input type="password" name="pword" id="pword" />
+            <input type="password" name="pword" id="pword" required />
           </label><br/><br/>
           <label> Date Of Birth :
             <input type="date" name="dob" id="dob" />
@@ -124,6 +90,6 @@
         </fieldset> 
       </form>
     </section>
-    <script src="script.js"></script>
+    <script src="q3e3script.js"></script>
   </body>
 </html>
