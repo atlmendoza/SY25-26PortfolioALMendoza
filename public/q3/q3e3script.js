@@ -39,14 +39,12 @@ form.addEventListener("reset", function(e) { //
   }
 });
 
-function changeColor(dInput) {
-  dInput.style.backgroundColor = "purple";
+function changeColor(art){
+  console.log(art);
+  art.style.backgroundColor = "purple";
 }
 
-function resetColor(dInput) {
-  dInput.style.backgroundColor = "blue";
+function resetColor(art){
+  console.log(art);
+  art.style.backgroundColor = "lightblue";
 }
-
-
-
-
