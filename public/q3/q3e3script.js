@@ -39,12 +39,15 @@ form.addEventListener("reset", function(e) { //
   }
 });
 
-function changeColor(art){
-  console.log(art);
-  art.style.backgroundColor = "purple";
+// called when user is on the input field
+function changeColor(dInput){
+  console.log(dInput);
+  dInput.style.backgroundColor = "purple";
 }
 
-function resetColor(art){
-  console.log(art);
-  art.style.backgroundColor = "lightblue";
+// called when user leaves the input field
+function resetColor(dInput){
+  console.log(dInput);
+  dInput.style.backgroundColor = "red";
 }
+ 
