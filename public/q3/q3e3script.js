@@ -40,14 +40,6 @@ form.addEventListener("reset", function(e) { //
 });
 
 // called when user is on the input field
-function changeColor(dInput){
-  console.log(dInput);
-  dInput.style.backgroundColor = "purple";
-}
 
-// called when user leaves the input field
-function resetColor(dInput){
-  console.log(dInput);
-  dInput.style.backgroundColor = "red";
-}
- 
+
+
