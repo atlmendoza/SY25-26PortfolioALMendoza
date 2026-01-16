@@ -44,6 +44,10 @@ function changeColor(ele) {
   console.log(ele);
   ele.style.backgroundColor = "blue";
 } 
+function resetColor(ele) {
+  console.log(ele);
+  ele.style.backgroundColor = "white";
+} 
 
 
 
