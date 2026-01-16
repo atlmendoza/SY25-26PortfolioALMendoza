@@ -7,7 +7,7 @@ const form = document.getElementById("dForm"); // get the HTML form from q3ge2Me
 
 // event handler on the submit button instead of onsubmit on the button itself
 form.addEventListener("submit", function(e) { // assign an event handler of submit to the form
-    //e.preventDefault(); // prevent page reload because forms gets submitted
+    e.preventDefault(); // prevent page reload because forms gets submitted
 
     if (confirm("Sure You Want To Save Your Work?")) {   
         // use a predefined class to create an object of data
@@ -40,6 +40,15 @@ form.addEventListener("reset", function(e) { //
 });
 
 // called when user is on the input field
+function changeColor(ele) {
+  console.log(ele);
+  ele.style.backgroundColor = "blue";
+} 
+
+
+
+
+
 
 
 
