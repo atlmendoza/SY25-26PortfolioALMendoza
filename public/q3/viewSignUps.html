@@ -111,8 +111,9 @@
       home.onclick = () => {
         window.location.href = "../../index.html";
       }
-      
+
       function showClub(theClub) {
+        totalSignUp = 0;        // to ready the counter
         // read from the localStorage saved as a string - to see if there are anything saved on the users coomputer
         let signupString = localStorage.getItem("clubsignups")
         if (!signupString) { rowString = "No Accounts Found" } // initialize the variable to contain the list of accounts object
@@ -120,8 +121,6 @@
             signupsList = JSON.parse(signupString) // converts string into the correct data type in this case object    
             rowString = "";
             results.innerHTML = ""  // resets the table
-            totalSignUp = 0;        // to ready the counter
-
             for (let key in signupsList) {
               
               if (signupsList[key].clubs == theClub || theClub == 'All') {
