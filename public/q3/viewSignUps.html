@@ -103,6 +103,15 @@
       
     </section>
     <script>
+        // onclick event listeners for buttons
+      signup.onclick = () => {
+        window.location.href = "q3ge3Mendoza.html";
+      }
+
+      home.onclick = () => {
+        window.location.href = "../../index.html";
+      }
+      
       function showClub(theClub) {
         // read from the localStorage saved as a string - to see if there are anything saved on the users coomputer
         let signupString = localStorage.getItem("clubsignups")
@@ -142,14 +151,6 @@
       
       showClub('All') // call the club initially.
 
-      // onclick event listeners for buttons
-      signup.onclick = () => {
-        window.location.href = "q3ge3Mendoza.html";
-      }
-
-      home.onclick = () => {
-        window.location.href = "../../index.html";
-      }
 
     </script>
   </body>
