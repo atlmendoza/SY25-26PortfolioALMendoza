@@ -9,7 +9,7 @@ Below is a complete code to implement it in JS Object only and then followed by 
 ## A. Example to implement CRUD on JS Object below
 ### Try the example here: [CRUD with JSObject](https://onecompiler.com/javascript/44eh47nwv)
 
-```
+```python
 // Our main object: an anime collection with multiple characters
 let animeCollection = {
   naruto: { name: "Naruto Uzumaki", age: 17, anime: "Naruto" },
@@ -25,10 +25,16 @@ This means adding new data.
 Example: Adding a new anime character to your collection.
 
 In code:
-```
+
+```python
 // 1. ADD a new character **sakura**
+
 animeCollection.sakura = { name: "Sakura Haruno", age: 17, anime: "Naruto" };
-console.log("\n1. The anime object status after adding sakura\n")
+
+// Note: you can also use the square bracket notation like so below:
+// animeCollection["sakura"] = { name: "Sakura Haruno", age: 17, anime: "Naruto" };
+
+console.log("\n1. The animeCollection object after adding sakura\n")
 console.log(animeCollection);
 ```
 
@@ -40,14 +46,17 @@ Example: Checking the name of a character.
 
 In code:
 
-```
-// 2b. READ a character's information
+```python
+// 2b. READ a character information
+
 console.log("\nReading Specific information from animeCollection \n")
 console.log(animeCollection.luffy.name);   // Monkey D. Luffy
 console.log(animeCollection.goku.anime);   // Dragon Ball Z
 
 // 2b. READ through the object
+
 console.log("\n2. Reading all data in animeCollection \n")
+
 for (let key in animeCollection) {
   console.log(key, "=", animeCollection[key])
 }
@@ -61,18 +70,25 @@ Example: Changing Naruto’s age after his birthday.
 
 In code:
 
-```
-/// 3a. UPDATE a character's information
-console.log("\n3a. Anime Collection after an update on naruto \n")
+```python
+// 3a. UPDATE a character information
+
 animeCollection.naruto.age = 18; // Naruto had a birthday!
+
+console.log("\n3a. Anime Collection after an update on naruto \n")
 console.log(animeCollection.naruto);
-// { name: 'Naruto Uzumaki', age: 18, anime: 'Naruto' }
+
+// Result: { name: 'Naruto Uzumaki', age: 18, anime: 'Naruto' }
 
 // 3b. Updating by adding a new entry
+
 console.log("\n3b. Adding new anime Anime  \n")
+
 animeCollection.perseus = { name: "Perseus", age: 25, anime: "Clash of the Titans" };
+
 console.log(animeCollection.perseus);
-// { name: "Perseus", age: 25, anime: "Clash of the Titans" }
+
+// Result: { name: "Perseus", age: 25, anime: "Clash of the Titans" }
 ```
 
 ### D – Delete
@@ -82,11 +98,16 @@ This means removing data.
 Example: Removing a character from the collection.
 
 In code:
-```
+
+```python
 // 4. DELETE a character
+
 console.log("\n4. Deleting an entry from the animeCollection \n")
+
 delete animeCollection.goku;
+
 console.log(animeCollection);
+
 // goku is gone, only naruto, luffy, and sakura remain
 ```
 
@@ -95,7 +116,7 @@ console.log(animeCollection);
 ## B. The Example to implement CRUD on JS Object with localStorage
 ### Try the example here: [Putting it all together on a website](https://onecompiler.com/html/44eh6pd3u)
 
-```
+```python
 // Our anime collection object
 let animeCollection = {
   naruto: { name: "Naruto Uzumaki", age: 17, anime: "Naruto" },
@@ -106,7 +127,7 @@ let animeCollection = {
 
 ### C-Create
 
-```
+```python
 // 1. SAVE to localStorage
 localStorage.setItem("animeCollection", JSON.stringify(animeCollection));
 // Data is stored as a string, so we use JSON.stringify
@@ -114,7 +135,7 @@ localStorage.setItem("animeCollection", JSON.stringify(animeCollection));
 
 ### R-ead
 
-```
+```python
 // 2. READ from localStorage
 let savedCollection = JSON.parse(localStorage.getItem("animeCollection"));
 console.log(savedCollection.luffy.name); // Monkey D. Luffy
@@ -123,8 +144,8 @@ console.log(savedCollection.luffy.name); // Monkey D. Luffy
 
 ### U-Update
 
-```
-// 3. UPDATE a character (Naruto’s age)
+```python
+// 3. UPDATE a character (age of Naruto)
 savedCollection.naruto.age = 18;
 
 // Save the updated object back to localStorage
@@ -133,7 +154,7 @@ localStorage.setItem("animeCollection", JSON.stringify(savedCollection));
 
 ### D-Delete
 
-```
+```python
 // 4. DELETE a character (remove Goku)
 delete savedCollection.goku;
 
