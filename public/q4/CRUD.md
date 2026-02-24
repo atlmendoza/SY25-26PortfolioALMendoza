@@ -9,7 +9,7 @@ Below is a complete code to implement it in JS Object only and then followed by 
 ## A. Example to implement CRUD on JS Object below
 ### Try the example here: [CRUD with JSObject](https://onecompiler.com/javascript/44eh47nwv)
 
-```python
+```js
 // Our main object: an anime collection with multiple characters
 let animeCollection = {
   naruto: { name: "Naruto Uzumaki", age: 17, anime: "Naruto" },
@@ -26,7 +26,7 @@ Example: Adding a new anime character to your collection.
 
 In code:
 
-```python
+```js
 // 1. ADD a new character **sakura**
 
 animeCollection.sakura = { name: "Sakura Haruno", age: 17, anime: "Naruto" };
@@ -46,7 +46,7 @@ Example: Checking the name of a character.
 
 In code:
 
-```python
+```js
 // 2b. READ a character information
 
 console.log("\nReading Specific information from animeCollection \n")
@@ -70,7 +70,7 @@ Example: Changing Naruto’s age after his birthday.
 
 In code:
 
-```python
+```js
 // 3a. UPDATE a character information
 
 animeCollection.naruto.age = 18; // Naruto had a birthday!
@@ -99,7 +99,7 @@ Example: Removing a character from the collection.
 
 In code:
 
-```python
+```js
 // 4. DELETE a character
 
 console.log("\n4. Deleting an entry from the animeCollection \n")
@@ -116,7 +116,7 @@ console.log(animeCollection);
 ## B. The Example to implement CRUD on JS Object with localStorage
 ### Try the example here: [Putting it all together on a website](https://onecompiler.com/html/44eh6pd3u)
 
-```python
+```js
 // Our anime collection object
 let animeCollection = {
   naruto: { name: "Naruto Uzumaki", age: 17, anime: "Naruto" },
@@ -127,7 +127,7 @@ let animeCollection = {
 
 ### C-Create
 
-```python
+```js
 // 1. SAVE to localStorage
 localStorage.setItem("animeCollection", JSON.stringify(animeCollection));
 // Data is stored as a string, so we use JSON.stringify
@@ -135,7 +135,7 @@ localStorage.setItem("animeCollection", JSON.stringify(animeCollection));
 
 ### R-ead
 
-```python
+```js
 // 2. READ from localStorage
 let savedCollection = JSON.parse(localStorage.getItem("animeCollection"));
 console.log(savedCollection.luffy.name); // Monkey D. Luffy
@@ -144,7 +144,7 @@ console.log(savedCollection.luffy.name); // Monkey D. Luffy
 
 ### U-Update
 
-```python
+```js
 // 3. UPDATE a character (age of Naruto)
 savedCollection.naruto.age = 18;
 
@@ -154,7 +154,7 @@ localStorage.setItem("animeCollection", JSON.stringify(savedCollection));
 
 ### D-Delete
 
-```python
+```js
 // 4. DELETE a character (remove Goku)
 delete savedCollection.goku;
 
