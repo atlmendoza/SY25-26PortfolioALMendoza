@@ -114,6 +114,9 @@ console.log(animeCollection);
 
 
 ## B. The Example to implement CRUD on JS Object with localStorage
+
+The process of CRUD with localStorage is that it should be applied first on the JSObject. The localStorage will be updated each time CRUD process had been done on the the JSOject, so take note when a line containing localStorage method is used.
+
 ### Try the example here: [Putting it all together on a website](https://onecompiler.com/html/44eh6pd3u)
 
 ```js
@@ -166,4 +169,22 @@ localStorage.setItem("animeCollection", JSON.stringify(savedCollection));
 localStorage.removeItem("animeCollection");
 ```
 
-### Do note that when you are reading, updating/adding, deleting, you need to check first if the data exists.
+### Do note that when you are reading, updating/adding, deleting, you need to check first if the data exists.  The sample line below is helpful when you implement this on your website:
+
+```js
+// Load saved collection or start fresh
+    let animeCollection = JSON.parse(localStorage.getItem("animeCollection")) || {};
+```
+
+This line tries to load the saved collection from localStorage. If there is no saved data (i.e., it returns null), it initializes animeCollection as an empty object {}. This way, you can safely perform CRUD operations without running into errors due to missing data.  This simplifies into one line the the if..else statement that is shown below
+
+```js
+// Check if data exists in localStorage
+let animeCollection;
+if (localStorage.getItem("animeCollection")) {
+  animeCollection = JSON.parse(localStorage.getItem("animeCollection"));
+} else {
+  animeCollection = {};
+}
+```
+
