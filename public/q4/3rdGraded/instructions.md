@@ -47,13 +47,14 @@ combined with 2 1 -10 1 as inputs as well
 ![image](images/with21-101.png)
 
 ## Requirements
-1. Please work by pair and only one will submit.
-2. Change the authors to contain both your names.
+1. Can work alone or with a partner. If with a partner, please indicate the their name when submitting.
+2. Change the title and the author/s to contain your name/s.
 3. All the HTML, CSS and java script is finished but with errors incorporated in both CSS and JavaScript.
 4. Identify the 10 errors and using the **`errorlogs.html`**, identify where they are found in terms of code line number and in what part (CSS or JS) and also describe how they were corrected by you.
 5. Learn on your own part: Research on the following:
    - HTML DOM Methods createElement, appendChild
    - HTML DOM attribute className
+   - image sprites
 
 ## Topics implemented in this requirement
 1. CSS position
