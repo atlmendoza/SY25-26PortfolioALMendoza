@@ -41,9 +41,11 @@ For each test case in the input your program must place in the last table row th
 and use the coordinate plane to plot the location as shown below:
 
 for 2 1 10 10 inputs
+
 ![image](images/for211010.png)
 
 combined with 2 1 -10 1 as inputs as well
+
 ![image](images/with21-101.png)
 
 ## Requirements
