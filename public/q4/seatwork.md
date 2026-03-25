@@ -1,5 +1,6 @@
 # Seatwork #2 - CSS Position
 ### This seatwork will ask you to implement the different CSS position on a given code.
+### short link: https://bit.ly/4c61P9K
 
 ### Instructions:
 1. Please find your partner and get one sheet of pad paper and write your answers to the Guided, Challenge and Reflection Questions
